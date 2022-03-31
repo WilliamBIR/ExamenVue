@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    
      </div>
 </template>
 
@@ -10,6 +11,14 @@ export default {
   name: 'HomeView',
   components: {
     
+  },
+  created:function(){
+        this.listaClientes()
+    },
+  methods:{
+    listaClientes(){
+      window.location.href='ListaClientes'
+    }
   }
 }
 </script>

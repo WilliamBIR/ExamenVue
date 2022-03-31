@@ -1,0 +1,31 @@
+CREATE TABLE `clientes` 
+( `Id` INT NOT NULL AUTO_INCREMENT, 
+`Nombre` VARCHAR(50) NOT NULL, 
+`Telefono` VARCHAR(20) NOT NULL, 
+`Ultimo_pago` DATETIME NULL, 
+`Fecha_creacion` DATETIME DEFAULT CURRENT_TIMESTAMP, 
+PRIMARY KEY(`Id`));
+
+
+CREATE TABLE `pagos`( 
+    `Id` INT NOT NULL AUTO_INCREMENT, 
+    `Cliente` INT NOT NULL , 
+    `Monto` DOUBLE NOT NULL , 
+    `Fecha_creacion` DATETIME NULL DEFAULT CURRENT_TIMESTAMP , 
+    PRIMARY KEY (`Id`), 
+    FOREIGN KEY (`Cliente`) REFERENCES clientes(`Id`) );
+
+/*Insersion de datos
+*/
+
+INSERT INTO clientes(`nombre`,`telefono`,`ultimo_pago`)
+VALUES
+('Juan Perez','12345','2020-20-15'),
+('John Smit','564321','2022-10-25');
+
+INSERT INTO pagos(`cliente`,`monto`,`fecha_creacion`) 
+VALUES 
+(1,200,'2021-09-01 11:00:00'), 
+(2,300,'2021-08-15 11:10:00'), 
+(1,110,'2021-10-16 11:20:00'), 
+(2,87.5,'2021-09-17 19:30:00');

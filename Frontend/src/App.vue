@@ -1,9 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
     <router-link to="/ListaClientes"> Mostrar Clientes  </router-link>|
-    <router-link to="/AgregarCliente">  Agregar Cliente  </router-link>|
-    <router-link to="/AgregarPago">   Agregar Pago  </router-link>|
+    <router-link to="/AgregarCliente">  Agregar Cliente  </router-link>
   </nav>
   <router-view/>
 </template>

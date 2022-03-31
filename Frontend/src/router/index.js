@@ -4,7 +4,8 @@ import AgregarCliente from '../components/AgregarCliente.vue'
 import AgregarPago from '../components/AgregarPago.vue'
 import ClienteId from '../components/ClienteId.vue'
 import ListaClientes from '../components/ListaClientes.vue'
-
+import EditarCliente from '../components/EditarCliente.vue'
+import EditarPago from '../components/EditarPago.vue'
 
 const routes = [
   {
@@ -23,9 +24,19 @@ const routes = [
     component:AgregarCliente
   },
   {
-    path:'/AgregarPago',
+    path:'/AgregarPago/:id',
     name:'AgregarPago',
     component:AgregarPago
+  },
+  {
+    path:'/EditarPago/:id',
+    name:'EditarPago',
+    component:EditarPago
+  },
+  {
+    path:'/EditarCliente/:id',
+    name:'EditarCliente',
+    component:EditarCliente
   },
   {
     path:'/ListaClientes',
